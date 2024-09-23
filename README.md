@@ -47,13 +47,16 @@ configure in the usart 2 as asynchronous mode and set the baud rate as 115200 as
 #define PUTCHAR_PROTOTYPE int fputc(int ch,FILE *f)
  #elif defined(__GNUC__)
 #define PUTCHAR_PROTOTYPE int __io_putchar(int ch) #endif
-
+```
+```
  while (1)   {
  /* USER CODE END WHILE */
   printf("your roll no and dept ");
   HAL_Delay(1000);
    /* USER CODE BEGIN 3 */
 }
+```
+```
 
 PUTCHAR_PROTOTYPE{
 	HAL_UART_Transmit(&huart2,(uint8_t*)&ch,1,0xFFFF);
